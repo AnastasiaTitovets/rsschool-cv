@@ -1,7 +1,9 @@
 # Anastasia Titovets
 
 Birth date: **22.01.1994**
+
 Phone: **+375 33 671-75-52**
+
 E-mail: **a.v.titovets@mail.ru**
 
 ## Short information about me
