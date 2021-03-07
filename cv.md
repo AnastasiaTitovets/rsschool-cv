@@ -30,3 +30,145 @@ MS Word, MS Excel, MS Powerpoint, AdobePhotoshop, 1С:Enterprise v. 7.7.
 1. May 2017 - September 2017. Worked as a programmist on Individual enterprener Bondarenko A.S.;
 2. September 2017 - February 2018. Worked as a programmist on private enterprise "Webstudia 1703";
 3. June 2018 - January 2021. Worked as the director (and major programmist) on the enterprise "Webstudia 1703".
+## The last projects
+
+* <https://greemdom.by/>
+* <http://belseverstroj.by/>
+* <http://valmari.by/>
+* <http://profibeg.by/>
+* <http://dveri.idre.by/>
+
+## Some code examples
+
+### Header block
+
+    <div class="header<?php if (horizontMenuDisable()) : ?> no-menu<?php endif; ?><?php if(isIndex()):?> header-main<?php endif;?>">
+	<div class="bottom-bar">
+            <div class="centered clearfix"> 		
+                <div class="logo-block">
+					<a href="<?php echo SITE ?>" class="logo-a-img">
+                        <?php echo mgLogo(); ?>
+                    </a>
+                </div>					
+				 <div class="top-search-block">
+						<?php layout('search'); ?>
+				</div>				 				 
+				<div class="top-features">               
+                    <?php layout('contacts_address'); ?>    				              
+                    <?php layout('contacts'); ?>                               				
+                </div>
+				<div class="work-hours-block">
+				<?php if(trim(MG::getSetting('shopTime')) != ''):?>				
+					<div class="work-hours">
+							<i class="far fa-clock"></i>
+							<div class="hours">
+								<?php echo htmlspecialchars_decode(MG::getSetting('shopTime'));?>
+							</div>
+					</div>
+				<?php endif; ?>	
+				<?php if(trim(MG::getSetting('shopTime2')) != ''):?>				
+					<div class="work-hours">
+							<i class="far fa-clock"></i>
+							<div class="hours">
+								<?php echo htmlspecialchars_decode(MG::getSetting('shopTime2'));?>
+							</div>
+					</div>
+				<?php endif; ?>				    				 
+			</div>				
+			<div class="header-curr-block">
+				<a href="javascript:void(0);" class="currency-btn tool-tip-top" data-toggle="tooltip" title="Выбор валюты"><i class="fas fa-dollar-sign"></i></a>
+				<div class="currency-filter-block" style="display: none;">
+					<div class="currency-filter-header">Выберите валюту</div>
+					<div class="currency-filter-body">
+						<?php foreach (MG::getSetting('currencyRate') as $key => $val) {
+							echo '<a href="javascript:void(0);" data-currency="'.$key.'">'.$key.'</a>';
+						  }  
+						?>
+					</div>
+				</div> 
+			</div>			
+			<?php layout('cart'); ?>		
+            </div>
+        </div>
+        <div class="top-bar">
+            <div class="centered">             				 
+                <div class="top-menu-block">                  
+                    <?php layout('topmenu'); ?>                   
+                    <div class="clear"></div>
+                </div>					
+                <div class="clear"></div>
+            </div>
+        </div>     
+    </div>
+***
+### Some CSS instructions
+
+    @media all and (max-width: 1300px) {
+    .wrapper .mg-search-block .search-field{
+    width: 250px;
+    }
+    .logo-block,
+    .work-hours,
+    .top-features{
+    margin-right: 30px;
+    }
+    .favourites-icon-block, .plugins,
+    .mg-product-to-compare,
+    .wrapper .mg-desktop-cart .cart{
+	margin-right: 20px;
+    }
+    .contacts-callback h3{
+    font-size: 20px;
+    margin-bottom: 0;
+    }
+    .contacts-callback p{
+    margin-top: 0;
+    }
+    .catalog-main-menu > li a.category-name{
+    font-size: 15px;
+    margin: 10px 25px;
+    }
+    .catalog-main-menu .submenu > li{
+    margin: 0 10px 5px 0;
+    }
+    }
+***
+### JS code
+
+    $('.open-menu-block-btn').on("click", function (e) {
+        e.preventDefault();
+        $('.menu-block').toggleClass('open');
+        $(this).toggleClass('opened');
+    });
+
+    $('.open-search-block-btn').on("click", function (e) {
+        e.preventDefault();
+        $('.mg-search-block').addClass('open');
+    });
+
+    $('.close-search-block-btn').on("click", function (e) {
+        e.preventDefault();
+        $('.mg-search-block').removeClass('open');
+    });
+
+    $('.currency-btn').on("click", function (e) {
+        e.preventDefault();
+        $('.currency-filter-block').toggleClass('open');
+    });
+
+    $('.checkout-btn').on("click", function () {
+        var re1 = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
+        var email = $('.form-list input[name=email]').val();
+        if (!re1.test(email) || email == '') {
+            alert('Неправильный e-mail адрес.');
+            return false;
+        }
+        var phone = $('.form-list input[name=phone]').val();
+        if(phone.length == 0){
+            alert('Введите телефон.');
+            return false;
+        }else{
+            ym(11111111, 'reachGoal', 'check');
+            gtag('event', 'Оформление заказа', {'event_category': 'checkout', 'event_action': 'check'});
+        }
+    });
