@@ -172,3 +172,15 @@ MS Word, MS Excel, MS Powerpoint, AdobePhotoshop, 1С:Enterprise v. 7.7.
             gtag('event', 'Оформление заказа', {'event_category': 'checkout', 'event_action': 'check'});
         }
     });
+ 
+## Education
+
+1. September 2011 - June 2015. Belarusian-Russian University. Specialization "Economics and management in enterprise". Qualification "Economist-manager".
+2. September 2015 - June 2016. Belarusian-Russian University. Specialization "Economics and management of national economy". Qualification "Master of Economic Sciences".
+3. July 2014 - August 2014. Educational center "Mela Rosa". Basic PHP courses.
+
+## Soft skills
+
+### English
+
+Pre-intermediate level.
