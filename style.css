@@ -28,9 +28,31 @@ footer{
     max-width: 1366px;
     margin: 0 auto;
 }
-header,
+header{
+    padding: 20px;
+}
 footer{
     padding: 20px;
+}
+nav{
+    padding: 15px 20px;
+}
+nav ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: left;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li + li{
+    margin-left: 20px;
+    margin-top: 0;
+}
+nav ul li a{
+    font-weight: bold;
+    font-size: 16px;
 }
 section{
     padding: 40px;
@@ -72,6 +94,10 @@ margin-top: 10px;
 }
 a{
     color: var(--main-theme-color);
+    transition: all 0.3s;
+}
+a:hover{
+    color: var(--title-color);
 }
 section#projects ul{
     list-style: none;
@@ -79,9 +105,17 @@ section#projects ul{
     columns: 3;
     width: 700px;
 }
-
 section#projects ul li a{
     font-weight: bold;
+}
+pre{
+    font-size: 14px;
+    margin: 0;
+}
+hr{
+    border: 0;
+    border-top: 5px solid var(--light-bg-color);
+    height: 0px;
 }
 
 
