@@ -102,8 +102,7 @@ MS Word, MS Excel, MS Powerpoint, AdobePhotoshop, 1С:Enterprise v. 7.7.
             </div>
         </div>     
     </div>
-
-
+    
 ***
 ### Some CSS instructions
 
