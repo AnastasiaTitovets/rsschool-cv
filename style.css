@@ -15,6 +15,7 @@ body{
     font-weight: 200;
     margin: 0;
     text-align: justify;
+    line-height: 30px;
 }
 p{
     font-size: inherit;
@@ -41,13 +42,11 @@ header img{
     border-radius: 75px 4px 4px 75px;
     margin-right: 25px;
 }
-.contacts{
-    height: 150px;
-}
 .contacts ul{
     list-style: none;
     font-size: 16px;
     font-weight: 400;
+    line-height: 20px;
 }
 .contacts ul li a{
     text-decoration: none;
@@ -77,7 +76,7 @@ footer div:last-child a{
     top: -3px;
 }
 nav{
-    padding: 15px 40px;
+    padding: 10px 40px;
 }
 nav ul{
     padding: 0;
@@ -102,7 +101,7 @@ section{
 }
 h1{
     font-size: 30px;
-    margin: 7px 0 10px;
+    margin: 10px 0;
     font-weight: 900;
 }
 h2{
@@ -141,7 +140,8 @@ section#education ol{
     margin-bottom: 0;
 }
 section#skills ul,
-section#experience ol{
+section#experience ol,
+section#education ol{
     padding: 0 0 0 15px;
 }
 a{
@@ -164,6 +164,7 @@ section#projects ul li a{
 pre{
     font-size: 14px;
     margin: 0;
+    white-space: break-spaces;
 }
 hr{
     border: 0;
