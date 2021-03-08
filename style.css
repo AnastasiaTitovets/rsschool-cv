@@ -29,7 +29,22 @@ footer{
     margin: 0 auto;
 }
 header{
-    padding: 20px;
+    padding: 20px 40px;
+}
+header img{
+
+}
+.contacts{
+
+}
+.contacts ul{
+
+}
+.contacts ul li{
+    
+}
+.contacts ul li a{
+    
 }
 footer{
     padding: 20px;
