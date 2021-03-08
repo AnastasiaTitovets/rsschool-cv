@@ -4,21 +4,41 @@
 }
 body{
     font-family: 'Lato', sans-serif;
+    color: #202020;
+    font-size: 18px;
+    font-weight: 200;
 }
-header{
-
+p{
+    font-size: inherit;
+}
+ul{
+    font-size: inherit;  
+}
+header,
+section,
+footer{
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+}
+header,
+footer{
+    padding: 20px;
 }
 section{
-
+    padding: 40px;
 }
 h1{
-
+    font-size: 40px;
+    margin: 0 0 0;
 }
 h2{
-
+    font-size: 30px;
+    margin: 0 0 30px;
 }
 h3{
-    
+    font-size: 20px;
+    margin: 0 0 20px;
 }
 
 
